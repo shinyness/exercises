@@ -1,0 +1,79 @@
+h1, h2, p{ margin: 0; }
+h2{ margin: 0 0 10px 0; }
+ul{ margin: 0; }
+
+.resume{
+    margin: 0 auto;
+    width: 90%;
+}
+
+.navigation{
+    background: rgba(0,0,0,0.5);
+    padding: 0 10px;
+    position: fixed;
+    right: 5%;
+    text-align: right;
+}
+.navigation ul{
+    display: inline-block;
+    list-style: outside none none;
+    margin: 10px;
+    padding: 0;
+}
+.navigation ul li{
+    display: inline-block;
+    padding: 0 10px;
+}
+.navigation a{
+    color: rgb(255,255,255);
+    text-decoration: none;
+}
+.navigation a:hover, a:active{
+    color: rgba(255,255,255,0.75);
+}
+
+header, section{
+    margin: 15px 0;
+}
+
+header{
+    border-bottom: 1px solid #000;
+    text-align: center;
+}
+header p{
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.experience .position-list{
+    list-style: outside none none;
+}
+.experience .position{
+    margin-bottom: 15px;
+}
+.experience p{
+    margin-bottom: 5px;
+}
+.experience .title{
+    font-weight: bold;
+}
+
+.skills{
+    overflow: auto;
+}
+.skills .skills-list li{
+    float: left;
+    width: 50%;
+}
+
+
+.education p{
+    padding: 0 0 0 40px;
+}
+
+
+@media only screen and (max-width: 480px) {
+
+/*_______change css   
+
+}
