@@ -39,12 +39,6 @@ startQuiz();
 /* Exercise 2
 Write a closure that outputs the next item in the array every time it is invoked.
 */
-var nextName = getNames();
-    nextName()     // William
-    nextName()     // Cindy
-    nextName()     // Maureen
-    nextName()     // Brenden
-
 function getNames() {
 	var names = ["William", "Cindy", "Maureen", "Brenden"];
 	var counter = -1;
