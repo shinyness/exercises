@@ -12,9 +12,9 @@ the callback function to define what we want to happen.
 
 function each(collection, callback) {
 	if (Array.isArray(collection)) {
-    for (var i=0; i<collection.length; i++) {
-        callback(collection[i]);
-    }
+		for (var i=0; i<collection.length; i++) {
+		callback(collection[i]);
+		}
 	} else {
 		for (var prop in collection) {
 			callback(collection[prop]);
@@ -23,7 +23,7 @@ function each(collection, callback) {
 
 }
 each(arrayOfNumbers, function(number){
-    console.log(1 + number);
+	console.log(1 + number);
 }); //Logs out every number in the array plus 1
 
 
