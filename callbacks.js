@@ -1,4 +1,9 @@
 var arrayOfNumbers = [1,2,3,4,5];
+var objectOfNumbers = {
+	one : 1,
+	two : 2,
+	three : 3
+};
 
 /* -------------------------------- */
 /* Each
@@ -9,7 +14,6 @@ When we define the callback function, we create a parameter that will be used to
 represent the current element in the array and we can then use that parameter in
 the callback function to define what we want to happen.
 */
-
 function each(collection, callback) {
 	if (Array.isArray(collection)) {
 		for (var i=0; i<collection.length; i++) {
@@ -32,9 +36,6 @@ each(arrayOfNumbers, function(number){
 Write a 'map' function that takes a collection and a callback function.
 The callback function returns a new collection.
 */
-
-var arrayOfNumbers = [1,2,3,4,5];
-
 var map = function(collection, callback) {
 	var arr = [];
 
@@ -62,7 +63,6 @@ Write a 'filter' function that takes a collection and a callback function.
 The callback function returns a new collection and tests to see if the element
 belongs in the new collection.
 */
-
 var arrayOfNumbers = [1,2,-4,6,-12,24,2,-9];
 
 var filter = function(collection, callback) {
@@ -82,12 +82,12 @@ var positiveNumbers = filter(arrayOfNumbers, function(num){
 }); // [1,2,6,24,2]
 console.log(positiveNumbers);
 
+
 /* -------------------------------- */
 /* Reduced Number
 Write a 'reduce' function that takes a collection and a callback function.
 It will return a reduced version of all the numbers in a given collection.
 */
-
 var arrayOfNumbers = [2,5,3,6,5];
 
 var reduce = function(collection, callback) {
@@ -112,3 +112,23 @@ var reducedNumber = reduce(arrayOfNumbers, function(multi, number){
 	return multi * number;
 }); // 900
 console.log(reducedNumber);
+
+
+/* -------------------------------- */
+/* Contains using Reduce
+Write a 'contains' function that takes a collection and a value.  It will use the Reduce function.  It will compare the value the elements in the list and return 'true' if the value is present else return false.
+*/
+var contains = function (collection, value) {
+	console.log('collection = ' + collection);
+	console.log('value = ' + value);
+
+	return reduce(collection, function(flag, element){
+		console.log('element = ' + element);
+		console.log('flag = ' + flag);
+		if (flag) {
+			return true;
+		} else {
+			return element === value;
+		}
+	}, false);
+}
